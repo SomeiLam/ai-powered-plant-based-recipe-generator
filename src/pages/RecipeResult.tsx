@@ -171,7 +171,10 @@ export const RecipeResult = () => {
         // Ensure valid JSON format (attempt to extract JSON only)
         const jsonStart = cleanedText.indexOf('{')
         const jsonEnd = cleanedText.lastIndexOf('}')
-        const validJson = cleanedText.substring(jsonStart, jsonEnd + 1)
+        let validJson = cleanedText.substring(jsonStart, jsonEnd + 1)
+
+        // Remove trailing commas before closing brackets (invalid in JSON)
+        validJson = validJson.replace(/,\s*([\]}])/g, '$1')
 
         console.log('Sanitized JSON:', validJson)
 
@@ -210,7 +213,7 @@ export const RecipeResult = () => {
   }
 
   return (
-    <div className="min-h-screen  bg-[#FAFAF8] p-6">
+    <div className="bg-[#FAFAF8] p-6">
       <div className="max-w-6xl mx-auto">
         <button
           onClick={() => navigate(-1)}
@@ -221,8 +224,8 @@ export const RecipeResult = () => {
         </button>
 
         {isLoading ? (
-          <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-            <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="min-h-[500px] bg-gray-50 flex items-center justify-center">
+            <div className="min-h-[500px] bg-gray-50 flex items-center justify-center">
               <div
                 className="font-bold text-2xl font-mono flex flex-row gap-3 items-center"
                 style={{
