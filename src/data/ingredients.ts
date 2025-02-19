@@ -6,7 +6,7 @@ export const ingredients = [
         id: '1',
         name: 'Lentils',
         tags: ['high protein', 'high fiber', 'rich in iron', 'low calorie'],
-        image: 'public/assets/lentils.jpg',
+        image: '/assets/lentils.jpg',
       },
       {
         id: '2',
@@ -17,19 +17,19 @@ export const ingredients = [
           'rich in folate',
           'low glycemic index',
         ],
-        image: 'public/assets/chickpeas.jpg',
+        image: '/assets/chickpeas.jpg',
       },
       {
         id: '3',
         name: 'Black Beans',
         tags: ['high protein', 'high fiber', 'rich in antioxidants', 'low fat'],
-        image: 'public/assets/black-beans.jpg',
+        image: '/assets/black-beans.jpg',
       },
       {
         id: '4',
         name: 'Kidney Beans',
         tags: ['high protein', 'high fiber', 'rich in iron', 'low fat'],
-        image: 'public/assets/kidney-beans.jpg',
+        image: '/assets/kidney-beans.jpg',
       },
       {
         id: '5',
@@ -52,7 +52,7 @@ export const ingredients = [
           'rich in vitamin A',
           'low fat',
         ],
-        image: 'public/assets/green-peas.jpg',
+        image: '/assets/green-peas.jpg',
       },
       {
         id: '7',
@@ -100,7 +100,7 @@ export const ingredients = [
         id: '11',
         name: 'Chia Seeds',
         tags: ['high protein', 'high fiber', 'rich in omega-3', 'gluten-free'],
-        image: 'public/assets/chia-seeds.jpg',
+        image: '/assets/chia-seeds.jpg',
       },
       {
         id: '12',
@@ -159,7 +159,7 @@ export const ingredients = [
           'supports brain health',
           'gluten-free',
         ],
-        image: 'public/assets/walnut.jpg',
+        image: '/assets/walnut.jpg',
       },
       {
         id: '17',
@@ -170,7 +170,7 @@ export const ingredients = [
           'supports heart health',
           'gluten-free',
         ],
-        image: 'public/assets/almonds.jpg',
+        image: '/assets/almonds.jpg',
       },
       {
         id: '18',
@@ -181,7 +181,7 @@ export const ingredients = [
           'supports bone health',
           'gluten-free',
         ],
-        image: 'public/assets/cashews.jpg',
+        image: '/assets/cashews.jpg',
       },
       {
         id: '19',
@@ -192,7 +192,7 @@ export const ingredients = [
           'supports skin health',
           'gluten-free',
         ],
-        image: 'public/assets/sesame.jpg',
+        image: '/assets/sesame.jpg',
       },
       {
         id: '20',
@@ -203,7 +203,7 @@ export const ingredients = [
           'supports heart health',
           'gluten-free',
         ],
-        image: 'public/assets/pine-nuts.jpg',
+        image: '/assets/pine-nuts.jpg',
       },
     ],
   },
@@ -219,7 +219,7 @@ export const ingredients = [
           'rich in vitamin C',
           'low calorie',
         ],
-        image: 'public/assets/kale.jpg',
+        image: '/assets/kale.jpg',
       },
       {
         id: '22',
@@ -230,7 +230,7 @@ export const ingredients = [
           'rich in vitamin A',
           'low calorie',
         ],
-        image: 'public/assets/spinach.jpg',
+        image: '/assets/spinach.jpg',
       },
       {
         id: '23',
@@ -241,7 +241,7 @@ export const ingredients = [
           'rich in calcium',
           'low calorie',
         ],
-        image: 'public/assets/broccoli.jpg',
+        image: '/assets/broccoli.jpg',
       },
       {
         id: '24',
@@ -252,7 +252,7 @@ export const ingredients = [
           'high fiber',
           'good for eyesight',
         ],
-        image: 'public/assets/carrots.jpg',
+        image: '/assets/carrots.jpg',
       },
       {
         id: '25',
@@ -263,7 +263,7 @@ export const ingredients = [
           'supports digestion',
           'gluten-free',
         ],
-        image: 'public/assets/sweet-potato.jpg',
+        image: '/assets/sweet-potato.jpg',
       },
       {
         id: '26',
@@ -274,7 +274,7 @@ export const ingredients = [
           'rich in antioxidants',
           'supports heart health',
         ],
-        image: 'public/assets/cauliflower.jpg',
+        image: '/assets/cauliflower.jpg',
       },
       {
         id: '27',
@@ -285,7 +285,7 @@ export const ingredients = [
           'supports digestion',
           'rich in vitamin C',
         ],
-        image: 'public/assets/zucchini.jpg',
+        image: '/assets/zucchini.jpg',
       },
       {
         id: '28',
@@ -296,7 +296,7 @@ export const ingredients = [
           'high in antioxidants',
           'supports immune system',
         ],
-        image: 'public/assets/bell-peppers.jpg',
+        image: '/assets/bell-peppers.jpg',
       },
       {
         id: '29',
@@ -307,7 +307,7 @@ export const ingredients = [
           'low calorie',
           'rich in antioxidants',
         ],
-        image: 'public/assets/brussels-sprouts.jpg',
+        image: '/assets/brussels-sprouts.jpg',
       },
       {
         id: '30',
@@ -318,7 +318,7 @@ export const ingredients = [
           'supports digestion',
           'rich in vitamin K',
         ],
-        image: 'public/assets/asparagus.jpg',
+        image: '/assets/asparagus.jpg',
       },
     ],
   },
@@ -370,7 +370,7 @@ export const ingredients = [
           'rich in potassium',
           'good for heart health',
         ],
-        image: 'public/assets/avocado.jpg',
+        image: '/assets/avocado.jpg',
       },
       {
         id: '35',
@@ -405,7 +405,7 @@ export const ingredients = [
           'low calorie',
           'contains bromelain',
         ],
-        image: 'public/assets/pineapple.jpg',
+        image: '/assets/pineapple.jpg',
       },
       {
         id: '38',
@@ -416,7 +416,7 @@ export const ingredients = [
           'supports heart health',
           'rich in vitamin C',
         ],
-        image: 'public/assets/apple.jpg',
+        image: '/assets/apple.jpg',
       },
       {
         id: '39',
@@ -427,7 +427,7 @@ export const ingredients = [
           'high in water content',
           'rich in enzymes',
         ],
-        image: 'public/assets/papaya.jpg',
+        image: '/assets/papaya.jpg',
       },
       {
         id: '40',
@@ -438,7 +438,7 @@ export const ingredients = [
           'anti-inflammatory',
           'supports blood circulation',
         ],
-        image: 'public/assets/pomegranate.jpg',
+        image: '/assets/pomegranate.jpg',
       },
     ],
   },
@@ -454,7 +454,7 @@ export const ingredients = [
           'gluten-free',
           'rich in magnesium',
         ],
-        image: 'public/assets/quinoa.jpg',
+        image: '/assets/quinoa.jpg',
       },
       {
         id: '43',
@@ -465,7 +465,7 @@ export const ingredients = [
           'supports heart health',
           'low glycemic index',
         ],
-        image: 'public/assets/oats.jpg',
+        image: '/assets/oats.jpg',
       },
       {
         id: '44',
@@ -500,7 +500,7 @@ export const ingredients = [
           'supports digestion',
           'rich in magnesium',
         ],
-        image: 'public/assets/millet.jpg',
+        image: '/assets/millet.jpg',
       },
       {
         id: '47',
@@ -511,7 +511,7 @@ export const ingredients = [
           'supports heart health',
           'gluten-free',
         ],
-        image: 'public/assets/wild-rice.jpg',
+        image: '/assets/wild-rice.jpg',
       },
     ],
   },
@@ -522,19 +522,19 @@ export const ingredients = [
         id: '48',
         name: 'Whole Wheat Bread',
         tags: ['high fiber', 'low glycemic index', 'rich in B vitamins'],
-        image: 'public/assets/whole-wheat-bread.jpg',
+        image: '/assets/whole-wheat-bread.jpg',
       },
       {
         id: '49',
         name: 'Brown Rice',
         tags: ['high fiber', 'supports digestion', 'rich in magnesium'],
-        image: 'public/assets/brown-rice.jpg',
+        image: '/assets/brown-rice.jpg',
       },
       {
         id: '50',
         name: 'Whole Wheat Pasta',
         tags: ['high fiber', 'complex carbs', 'rich in iron'],
-        image: 'public/assets/whole-wheat-pasta.jpg',
+        image: '/assets/whole-wheat-pasta.jpg',
       },
       {
         id: '51',
@@ -554,7 +554,7 @@ export const ingredients = [
         id: '53',
         name: 'Couscous',
         tags: ['quick to prepare', 'good source of selenium', 'low fat'],
-        image: 'public/assets/couscous.jpg',
+        image: '/assets/couscous.jpg',
       },
       {
         id: '55',
@@ -567,7 +567,7 @@ export const ingredients = [
         id: '57',
         name: 'Whole Grain Crackers',
         tags: ['high fiber', 'low fat', 'good for snacking'],
-        image: 'public/assets/crackers.jpg',
+        image: '/assets/crackers.jpg',
       },
     ],
   },
