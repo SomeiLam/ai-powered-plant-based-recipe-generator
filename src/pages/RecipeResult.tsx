@@ -158,38 +158,29 @@ export const RecipeResult = () => {
         const result = await model.generateContent(prompt)
         const resultString = result.response.text()
 
-        // Remove any Markdown code block formatting (e.g., ```javascript ... ```)
+        // Remove code block formatting (```javascript and ```)
         let cleanedText = resultString
-          .replace(/```[\s\S]*?\n/, '')
-          .replace(/```/g, '')
+          .replace(/```[\s\S]*?\n/, '') // Remove ```javascript or similar
+          .replace(/```/g, '') // Remove remaining ```
+          .replace(/const recipe = /, '') // Remove JavaScript variable declaration
+          .trim()
 
-        // Remove any possible "const recipe = " from the response
-        cleanedText = cleanedText.replace(/const recipe\s*=\s*/, '')
+        // Ensure object keys are properly quoted
+        cleanedText = cleanedText.replace(/([{,])(\s*)(\w+):/g, '$1"$3":')
 
-        // Ensure property names are properly quoted for valid JSON format
-        cleanedText = cleanedText.replace(
-          /([{,])(\s*)([a-zA-Z0-9_]+):/g,
-          '$1"$3":'
-        )
-
-        // Replace single quotes with double quotes
-        cleanedText = cleanedText.replace(/'/g, '"')
-
-        // Remove trailing commas (extra commas at the end of arrays or objects)
-        cleanedText = cleanedText.replace(/,\s*([\]}])/g, '$1')
-
-        // Find the start and end of the JSON structure
+        // Ensure valid JSON format (attempt to extract JSON only)
         const jsonStart = cleanedText.indexOf('{')
         const jsonEnd = cleanedText.lastIndexOf('}')
-
-        // Extract valid JSON content
         const validJson = cleanedText.substring(jsonStart, jsonEnd + 1)
 
-        // Attempt to parse the cleaned JSON
+        console.log('Sanitized JSON:', validJson)
+
+        // Attempt to parse the JSON safely
         const recipe = JSON.parse(validJson)
         setRecipe(recipe)
       } catch (error) {
         console.error('Unable to generate recipe:', error)
+        setRecipe(null) // Ensure UI handles this gracefully
       } finally {
         setIsLoading(false)
       }
@@ -201,7 +192,7 @@ export const RecipeResult = () => {
 
   if (!location.state) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 p-6">
+      <div className="min-h-screen  bg-[#FAFAF8] p-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-2xl font-bold text-gray-800 mb-4">
             No Recipe Selected
@@ -219,7 +210,7 @@ export const RecipeResult = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 p-6">
+    <div className="min-h-screen  bg-[#FAFAF8] p-6">
       <div className="max-w-6xl mx-auto">
         <button
           onClick={() => navigate(-1)}
