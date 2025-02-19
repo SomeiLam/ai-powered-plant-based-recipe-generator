@@ -8,22 +8,38 @@
 - **Ingredient Selection** – Choose from a variety of plant-based ingredients, including legumes, vegetables, grains, and nuts.
 - **Cuisine Customization** – Select a preferred cuisine style, such as Italian, Mediterranean, or Asian.
 - **Smart Filtering** – Non-plant-based ingredients are automatically excluded.
+- **Dynamic Tag-Based Filtering** – Easily filter ingredients by dietary benefits like "high protein," "low calorie," or "rich in Omega-3."
 - **Additional Ingredients** – AI suggests complementary seasonings, herbs, and essential additions.
 - **Step-by-Step Instructions** – Clear and structured cooking guidance for every recipe.
 
 ## 🥦 How It Works
 
 1. **Select Your Ingredients** – Choose plant-based ingredients from categorized options.
-2. **Pick a Cuisine** – Define the cuisine style to tailor the recipe.
-3. **Add Your Own Ingredients (Optional)** – Input additional ingredients, and the system will filter out non-plant-based items.
-4. **Generate Recipe** – The AI creates a structured, step-by-step recipe along with an image of the dish.
-5. **Cook & Enjoy** – Follow the instructions and enjoy your plant-based meal!
+2. **Filter by Nutritional Tags (Optional)** – Select from tags like "high fiber," "gluten-free," or "rich in vitamin C" to refine your ingredient list.
+3. **Pick a Cuisine** – Define the cuisine style to tailor the recipe.
+4. **Add Your Own Ingredients (Optional)** – Input additional ingredients, and the system will filter out non-plant-based items.
+5. **Generate Recipe** – The AI creates a structured, step-by-step recipe along with an image of the dish.
+6. **Cook & Enjoy** – Follow the instructions and enjoy your plant-based meal!
 
 ## 🛠️ Technologies Used
 
 - **Frontend**: React, TypeScript, Tailwind CSS
 - **AI Model**: Google Gemini AI for recipe
 - **Deployment**: Vercel
+
+## 🎯 Ingredient Filtering & Selection
+
+The app offers dynamic filtering by dietary benefits, allowing users to easily find ingredients that meet their preferences. You can filter ingredients based on:
+
+- **Nutritional Value** (e.g., "High Protein," "Rich in Omega-3")
+- **Dietary Needs** (e.g., "Gluten-Free," "Low Calorie")
+- **Health Benefits** (e.g., "Supports Digestion," "Heart-Healthy")
+
+### 🔹 How It Works:
+
+- Select tags to filter ingredients dynamically.
+- Only relevant plant-based options will be displayed.
+- Non-plant-based items are automatically excluded.
 
 ## 📸 Example Recipe Output
 
