@@ -154,31 +154,47 @@ export const RecipeResult = () => {
 
   useEffect(() => {
     const fetchResult = async () => {
-      const result = await model.generateContent(prompt)
-      const resultString = result.response.text()
-      let cleanedText = resultString
-        .replace(/```[\s\S]*?\n/, '') // Remove ```javascript or ```
-        .replace(/```/g, '') // Remove closing ```
-        .replace(/const recipe = /, '') // Remove `const recipe =`
-        .trim() // Trim extra spaces
-
-      cleanedText = cleanedText
-        .replace(/([{,])(\s*)(\w+):/g, '$1"$3":') // Quote object keys
-        .replace(/'/g, '"') // Convert single quotes to double quotes
-
-      const jsonStart = cleanedText.indexOf('{') // Find first {
-      const jsonEnd = cleanedText.lastIndexOf('}') // Find last }
-      const validJson = cleanedText.substring(jsonStart, jsonEnd + 1) // Extract pure JSON
-
       try {
+        const result = await model.generateContent(prompt)
+        const resultString = result.response.text()
+
+        // Remove any Markdown code block formatting (e.g., ```javascript ... ```)
+        let cleanedText = resultString
+          .replace(/```[\s\S]*?\n/, '')
+          .replace(/```/g, '')
+
+        // Remove any possible "const recipe = " from the response
+        cleanedText = cleanedText.replace(/const recipe\s*=\s*/, '')
+
+        // Ensure property names are properly quoted for valid JSON format
+        cleanedText = cleanedText.replace(
+          /([{,])(\s*)([a-zA-Z0-9_]+):/g,
+          '$1"$3":'
+        )
+
+        // Replace single quotes with double quotes
+        cleanedText = cleanedText.replace(/'/g, '"')
+
+        // Remove trailing commas (extra commas at the end of arrays or objects)
+        cleanedText = cleanedText.replace(/,\s*([\]}])/g, '$1')
+
+        // Find the start and end of the JSON structure
+        const jsonStart = cleanedText.indexOf('{')
+        const jsonEnd = cleanedText.lastIndexOf('}')
+
+        // Extract valid JSON content
+        const validJson = cleanedText.substring(jsonStart, jsonEnd + 1)
+
+        // Attempt to parse the cleaned JSON
         const recipe = JSON.parse(validJson)
         setRecipe(recipe)
       } catch (error) {
-        console.error('Unable to generate recipe: ', error)
+        console.error('Unable to generate recipe:', error)
       } finally {
         setIsLoading(false)
       }
     }
+
     setIsLoading(true)
     fetchResult()
   }, [prompt])
