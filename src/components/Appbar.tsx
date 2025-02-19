@@ -8,7 +8,7 @@ const Appbar = () => {
         <ChefHat className="w-8 h-8 text-green-500" />
         <h1 className="text-3xl font-bold text-gray-800">VeganGPT</h1>
       </Link>
-      <p className="text-gray-600">
+      <p className="text-gray-600 px-2">
         Select your ingredients and preferred cuisine for a magical recipe
         recommendation!
       </p>

@@ -256,8 +256,8 @@ export const RecipeResult = () => {
             </style>
           </div>
         ) : (
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden pt-8 pb-12 px-10">
-            <div className="p-6">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden pt-8 pb-12 sm:px-10">
+            <div className="sm:p-6 p-4">
               <div className="flex items-center gap-2 mb-4">
                 <CookingPot className="w-6 h-6 text-green-500" />
                 <h1 className="text-3xl font-bold text-gray-800">
