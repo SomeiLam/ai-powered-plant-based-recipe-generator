@@ -1,5 +1,7 @@
 {
   "name": "ai-recipe",
+  "author": "So Mei Amy Lam",
+  "repository": "https://github.com/SomeiLam/ai-powered-plant-based-recipe-generator",
   "private": true,
   "version": "0.0.0",
   "type": "module",
