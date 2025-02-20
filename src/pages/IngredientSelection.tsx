@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Utensils, ChevronDown, ChevronUp, Plus, Trash } from 'lucide-react'
+import { Utensils, Plus, Trash } from 'lucide-react'
 import { ingredients, cuisines } from '../data/ingredients'
 import { IngredientCard } from '../components/IngredientCard'
 import { IngredientTagFilter } from '../components/IngredientTagFilter'
@@ -10,12 +10,24 @@ export const IngredientSelection = () => {
   const [selectedIngredients, setSelectedIngredients] = useState<string[]>([])
   const [selectedCuisine, setSelectedCuisine] = useState<string>('')
   const [temp, setTemp] = useState<string>('')
+  const [customCuisine, setCustomCuisine] = useState('')
   const [additionalIngredients, setAdditionalIngredients] = useState<string[]>(
     []
   )
-  const [openCategories, setOpenCategories] = useState<string[]>([]) // Multiple open categories
+  const [activeTab, setActiveTab] = useState<string>(
+    ingredients[0]?.category || ''
+  )
+  const [showTags, setShowTags] = useState(false)
+  const ready =
+    (selectedIngredients.length || additionalIngredients.length) &&
+    (Boolean(selectedCuisine) || customCuisine)
 
   const navigate = useNavigate()
+
+  const handleToggleShowTags = () => {
+    if (showTags) setSelectedTags([])
+    setShowTags(!showTags)
+  }
 
   // ✅ Get selected ingredient details
   const selectedIngredientList = ingredients
@@ -36,25 +48,13 @@ export const IngredientSelection = () => {
     )
   }
 
-  // ✅ Toggle Category Accordion
-  const toggleCategory = (category: string) => {
-    setOpenCategories((prev) =>
-      prev.includes(category)
-        ? prev.filter((c) => c !== category)
-        : [...prev, category]
-    )
-  }
-
   // ✅ Handle Recipe Submission
   const handleSubmit = () => {
-    if (
-      (selectedIngredients.length > 0 || additionalIngredients.length > 0) &&
-      selectedCuisine
-    ) {
+    if (ready) {
       navigate('/recipe', {
         state: {
           ingredients: selectedIngredients,
-          cuisine: selectedCuisine,
+          cuisine: selectedCuisine || customCuisine,
           userInputIngredients: additionalIngredients,
         },
       })
@@ -85,55 +85,67 @@ export const IngredientSelection = () => {
           selectedTags={selectedTags}
           onToggleTag={handleToggleTag}
           title="Filter Ingredients by Tags"
+          showTags={showTags}
+          handleToggleShowTags={handleToggleShowTags}
         />
 
         <div className="space-y-4">
-          {ingredients.map((group) => {
-            // ✅ Apply tag filtering
-            const filteredItems = group.items.filter(
-              (ingredient) =>
-                selectedTags.length === 0 ||
-                selectedTags.some((tag) => ingredient.tags.includes(tag))
-            )
+          {/* Tabs Navigation with Counts */}
+          <div className="flex flex-wrap border-b mb-6">
+            {ingredients.map((group) => {
+              // Count matching items for this category
+              const matchingItems = group.items.filter(
+                (ingredient) =>
+                  selectedTags.length === 0 ||
+                  selectedTags.some((tag) => ingredient.tags.includes(tag))
+              ).length
 
-            if (filteredItems.length === 0) return null
-
-            return (
-              <div
-                key={group.category}
-                className="bg-white rounded-lg shadow-md"
-              >
-                {/* ✅ Category Header */}
+              return (
                 <button
-                  onClick={() => toggleCategory(group.category)}
-                  className="w-full flex justify-between items-center p-4 font-semibold text-gray-800 hover:bg-gray-100 rounded-lg transition"
+                  key={group.category}
+                  className={`px-4 py-2 text-lg font-semibold text-nowrap ${
+                    activeTab === group.category
+                      ? 'border-b-2 border-green-500 text-green-600'
+                      : 'text-gray-600'
+                  }`}
+                  onClick={() => setActiveTab(group.category)}
                 >
-                  {group.category}
-                  {openCategories.includes(group.category) ? (
-                    <ChevronUp className="w-5 h-5" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5" />
-                  )}
+                  {group.category}{' '}
+                  {matchingItems > 0 ? `(${matchingItems})` : ''}
                 </button>
+              )
+            })}
+          </div>
 
-                {/* ✅ Category Content */}
-                <div
-                  className={`duration-300 transition-all overflow-hidden ${openCategories.includes(group.category) ? 'max-h-screen p-4' : 'max-h-0'}`}
-                >
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {filteredItems.map((ingredient) => (
-                      <IngredientCard
-                        key={ingredient.id}
-                        ingredient={ingredient}
-                        selected={selectedIngredients.includes(ingredient.id)}
-                        onClick={() => toggleIngredient(ingredient.id)}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )
-          })}
+          {/* Ingredients Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {(() => {
+              const filteredItems =
+                ingredients
+                  .find((group) => group.category === activeTab)
+                  ?.items.filter(
+                    (ingredient) =>
+                      selectedTags.length === 0 ||
+                      selectedTags.some((tag) => ingredient.tags.includes(tag))
+                  ) || []
+
+              return filteredItems.length > 0 ? (
+                filteredItems.map((ingredient) => (
+                  <IngredientCard
+                    key={ingredient.id}
+                    ingredient={ingredient}
+                    selected={selectedIngredients.includes(ingredient.id)}
+                    onClick={() => toggleIngredient(ingredient.id)}
+                    showTags={showTags}
+                  />
+                ))
+              ) : (
+                <p className="text-gray-500 col-span-full text-center pt-10 pb-20">
+                  No matches found.
+                </p>
+              )
+            })()}
+          </div>
 
           {/* ✅ Cuisine Selection */}
           <div className="bg-white rounded-lg p-6 shadow-md">
@@ -144,7 +156,10 @@ export const IngredientSelection = () => {
               {cuisines.map((cuisine) => (
                 <button
                   key={cuisine}
-                  onClick={() => setSelectedCuisine(cuisine)}
+                  onClick={() => {
+                    setCustomCuisine('')
+                    setSelectedCuisine(cuisine)
+                  }}
                   className={`p-3 rounded-lg transition-all duration-300 ${
                     selectedCuisine === cuisine
                       ? 'bg-green-500 text-white'
@@ -154,6 +169,17 @@ export const IngredientSelection = () => {
                   {cuisine}
                 </button>
               ))}
+              <input
+                value={customCuisine}
+                onChange={(e) => {
+                  if (e.target.value) {
+                    setSelectedCuisine('')
+                  }
+                  setCustomCuisine(e.target.value)
+                }}
+                className="rounded-md border-gray-300 shadow-sm py-2 px-4"
+                placeholder="Enter your cuisine"
+              />
             </div>
           </div>
 
@@ -234,11 +260,11 @@ export const IngredientSelection = () => {
           </div>
 
           {/* ✅ Submit Button */}
-          <div className="text-center py-5">
+          <div className="text-center py-5 flex items-center justify-center">
             <button
               onClick={handleSubmit}
-              disabled={!selectedCuisine}
-              className="bg-green-500 text-white px-8 py-3 rounded-lg text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-green-600 transition-colors"
+              disabled={!ready}
+              className="bg-green-500 text-white px-8 py-3 rounded-lg flex flex-row gap-3 items-center justify-center text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-green-600 transition-colors"
             >
               <Utensils className="w-5 h-5" />
               Ready to Cook!

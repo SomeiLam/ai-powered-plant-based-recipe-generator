@@ -8,6 +8,7 @@ interface Recipe {
   title: string
   time: string
   servings: string
+  cuisine: string
   ingredients: { name: string; portion: string }[]
   additionalIngredients: string[]
   instructions: string[]
@@ -46,12 +47,13 @@ export const RecipeResult = () => {
     3. Check if the **userInputIngredients** contain plant-based foods. Ignore non-vegan items.
     4. Remove duplicates from **userInputIngredients** that are already in **selectedIngredients**.
     5. If a userInputIngredient is a **valid new plant-based food**, add it to the main ingredients list.
-    6. Assign **realistic portion sizes** for each ingredient.
-    7. Generate **additional complementary ingredients** (e.g., seasonings, spices, oils).
-    8. Generate **realistic cooking instructions** in a structured format.
-    9. Provide a **dish name**, **estimated cooking time**, and **number of servings**.
-    10. The **output format must follow the exact structure given below in JavaScript**.
-    11. Provide a **brief yet engaging description** of the dish, highlighting its key flavors, texture, and appeal.
+    6. If the cuisine is not a valid cuisine, use Mediterranean.
+    7. Assign **realistic portion sizes** for each ingredient.
+    8. Generate **additional complementary ingredients** (e.g., seasonings, spices, oils).
+    9. Generate **realistic cooking instructions** in a structured format.
+    10. Provide a **dish name**, **estimated cooking time**, and **number of servings**.
+    11. The **output format must follow the exact structure given below in JavaScript**.
+    12. Provide a **brief yet engaging description** of the dish, highlighting its key flavors, texture, and appeal.
     
     ---
     
@@ -109,6 +111,7 @@ export const RecipeResult = () => {
     - **Ingredients:** A list of **selectedIngredients** (including valid user-input ingredients) with assigned portions.
     - **Additional Ingredients:** Dynamically generated based on the cuisine (e.g., if it’s an Indian dish, suggest relevant spices).
     - **Instructions:** Clear, logical, and structured, guiding step-by-step from preparation to serving.
+    - **Return a valid JSON response** that follows the structure below without trailing commas and comments.
     
     ---
     
@@ -119,6 +122,7 @@ export const RecipeResult = () => {
       description: "A hearty and aromatic Middle Eastern-inspired chickpea stew, packed with rich flavors of cumin and smoked paprika, simmered in a tomato-based sauce with fresh spinach.",
       time: "35 minutes",
       servings: "4",
+      cuisine: "Mediterranean",
       ingredients: [
         { "name": "chickpeas", "portion": "1 cup, cooked" },
         { "name": "tomatoes", "portion": "2 medium, diced" },
@@ -235,7 +239,7 @@ export const RecipeResult = () => {
                 }}
               >
                 <Bot />
-                Generating recipe...
+                Generating your AI-powered recipe...
               </div>
 
               <style>
@@ -256,83 +260,98 @@ export const RecipeResult = () => {
             </style>
           </div>
         ) : (
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden pt-8 pb-12 sm:px-10">
-            <div className="sm:p-6 p-4">
-              <div className="flex items-center gap-2 mb-4">
-                <CookingPot className="w-6 h-6 text-green-500" />
-                <h1 className="text-3xl font-bold text-gray-800">
-                  {recipe?.title}
-                </h1>
-              </div>
-              <div className="flex items-center mb-4 py-4 border-b">
-                <h4 className="text-gray-700">{recipe?.description}</h4>
-              </div>
+          <>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden pt-8 pb-12 sm:px-10 mb-6">
+              <div className="sm:p-6 p-4">
+                <div className="flex items-center gap-2 mb-4">
+                  <CookingPot className="w-6 h-6 text-green-500" />
+                  <h1 className="text-3xl font-bold text-gray-800">
+                    {recipe?.title}
+                  </h1>
+                </div>
+                <div className="flex items-center mb-4 py-4 border-b">
+                  <h4 className="text-gray-700">{recipe?.description}</h4>
+                </div>
 
-              <div className="flex gap-4 mb-10">
-                <div className="flex items-center gap-1">
-                  <Clock className="w-5 h-5 text-gray-500" />
-                  <span>{recipe?.time}</span>
+                <div className="flex gap-4 mb-10">
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-5 h-5 text-gray-500" />
+                    <span>{recipe?.time}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-5 h-5 text-gray-500" />
+                    <span>{recipe?.servings} servings</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <ChefHat className="w-5 h-5 text-gray-500" />
+                    <span>{recipe?.cuisine || cuisine} cuisine</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-1">
-                  <Users className="w-5 h-5 text-gray-500" />
-                  <span>{recipe?.servings} servings</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <ChefHat className="w-5 h-5 text-gray-500" />
-                  <span>{cuisine} cuisine</span>
-                </div>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h2 className="text-xl font-semibold mb-3 text-gray-800">
-                    Your Ingredients
-                  </h2>
-                  <ul className="space-y-2">
-                    {recipe?.ingredients.map(
-                      (
-                        ingredient: { name: string; portion: string },
-                        index: number
-                      ) => (
-                        <li key={index} className="flex items-center gap-2">
-                          <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                          {ingredient.name} - {ingredient.portion}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-8">
+                    <h2 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+                      <span className="w-1.5 h-6 bg-green-500 rounded-full"></span>
+                      Your Ingredients
+                    </h2>
+                    <ul className="space-y-2">
+                      {recipe?.ingredients.map(
+                        (
+                          ingredient: { name: string; portion: string },
+                          index: number
+                        ) => (
+                          <li key={index} className="flex items-center gap-3">
+                            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                            {ingredient.name} - {ingredient.portion}
+                          </li>
+                        )
+                      )}
+                    </ul>
+
+                    <h2 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+                      <span className="w-1.5 h-6 bg-blue-500 rounded-full"></span>
+                      Additional Ingredients
+                    </h2>
+                    <ul className="space-y-2">
+                      {recipe?.additionalIngredients.map(
+                        (ingredient, index) => (
+                          <li key={index} className="flex items-center gap-3">
+                            <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                            {ingredient}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h2 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+                      <span className="w-1.5 h-6 bg-green-500 rounded-full"></span>
+                      Instructions
+                    </h2>
+                    <ol className="space-y-4">
+                      {recipe?.instructions.map((instruction, index) => (
+                        <li key={index} className="flex gap-3">
+                          <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-500 rounded-full flex items-center justify-center font-semibold">
+                            {index + 1}
+                          </span>
+                          <p className="text-gray-700">{instruction}</p>
                         </li>
-                      )
-                    )}
-                  </ul>
-
-                  <h2 className="text-xl font-semibold mb-3 mt-6 text-gray-800">
-                    Additional Ingredients
-                  </h2>
-                  <ul className="space-y-2">
-                    {recipe?.additionalIngredients.map((ingredient, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        {ingredient}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h2 className="text-xl font-semibold mb-3 text-gray-800">
-                    Instructions
-                  </h2>
-                  <ol className="space-y-4">
-                    {recipe?.instructions.map((instruction, index) => (
-                      <li key={index} className="flex gap-3">
-                        <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-500 rounded-full flex items-center justify-center font-semibold">
-                          {index + 1}
-                        </span>
-                        <p className="text-gray-700">{instruction}</p>
-                      </li>
-                    ))}
-                  </ol>
+                      ))}
+                    </ol>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <p className="text-gray-600 leading-relaxed">
+                Please note that while the AI carefully considers your selected
+                ingredients and preferences, the final result may include slight
+                variations or additional ingredients to enhance flavor and
+                balance. Feel free to adjust the recipe to suit your taste! 🌿
+              </p>
+            </div>
+          </>
         )}
       </div>
     </div>

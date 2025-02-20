@@ -3,13 +3,13 @@ export const ingredients = [
     category: 'Legumes',
     items: [
       {
-        id: '1',
+        id: '11',
         name: 'Lentils',
         tags: ['high protein', 'high fiber', 'rich in iron', 'low calorie'],
         image: '/assets/lentils.jpg',
       },
       {
-        id: '2',
+        id: '12',
         name: 'Chickpeas',
         tags: [
           'high protein',
@@ -20,19 +20,19 @@ export const ingredients = [
         image: '/assets/chickpeas.jpg',
       },
       {
-        id: '3',
+        id: '13',
         name: 'Black Beans',
         tags: ['high protein', 'high fiber', 'rich in antioxidants', 'low fat'],
         image: '/assets/black-beans.jpg',
       },
       {
-        id: '4',
+        id: '14',
         name: 'Kidney Beans',
         tags: ['high protein', 'high fiber', 'rich in iron', 'low fat'],
         image: '/assets/kidney-beans.jpg',
       },
       {
-        id: '5',
+        id: '15',
         name: 'Edamame',
         tags: [
           'high protein',
@@ -44,7 +44,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/e/e7/Edamame_by_Zesmerelda_in_Chicago.jpg',
       },
       {
-        id: '6',
+        id: '16',
         name: 'Green Peas',
         tags: [
           'high fiber',
@@ -55,13 +55,13 @@ export const ingredients = [
         image: '/assets/green-peas.jpg',
       },
       {
-        id: '7',
+        id: '17',
         name: 'Tofu',
         tags: ['high protein', 'low calorie', 'rich in calcium', 'gluten-free'],
         image: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Tofu_4.jpg',
       },
       {
-        id: '8',
+        id: '18',
         name: 'Tempeh',
         tags: [
           'high protein',
@@ -73,7 +73,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/e/e1/Tempeh_%288681605421%29.jpg',
       },
       {
-        id: '9',
+        id: '19',
         name: 'Mung Beans',
         tags: [
           'high protein',
@@ -85,7 +85,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/f/fc/Bean_pod_of_Vigna_radiata_%28mung_bean%29.jpg',
       },
       {
-        id: '10',
+        id: '110',
         name: 'Lupini Beans',
         tags: ['high protein', 'high fiber', 'rich in magnesium', 'low fat'],
         image:
@@ -97,13 +97,13 @@ export const ingredients = [
     category: 'Seeds and Nuts',
     items: [
       {
-        id: '11',
+        id: '21',
         name: 'Chia Seeds',
         tags: ['high protein', 'high fiber', 'rich in omega-3', 'gluten-free'],
         image: '/assets/chia-seeds.jpg',
       },
       {
-        id: '12',
+        id: '22',
         name: 'Flaxseeds',
         tags: [
           'high fiber',
@@ -115,7 +115,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/5/56/Brown_Flax_Seeds.jpg',
       },
       {
-        id: '13',
+        id: '23',
         name: 'Hemp Seeds',
         tags: [
           'high protein',
@@ -127,7 +127,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/f/f4/Hemp_Seeds_protein1.jpg',
       },
       {
-        id: '14',
+        id: '24',
         name: 'Sunflower Seeds',
         tags: [
           'rich in vitamin E',
@@ -139,7 +139,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/1/13/Whole_Sunflower_seed.jpg',
       },
       {
-        id: '15',
+        id: '25',
         name: 'Pumpkin Seeds',
         tags: [
           'high protein',
@@ -151,7 +151,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/2/2e/Pumpkin_Seeds.jpg',
       },
       {
-        id: '16',
+        id: '26',
         name: 'Walnuts',
         tags: [
           'rich in omega-3',
@@ -162,7 +162,7 @@ export const ingredients = [
         image: '/assets/walnut.jpg',
       },
       {
-        id: '17',
+        id: '27',
         name: 'Almonds',
         tags: [
           'high protein',
@@ -173,7 +173,7 @@ export const ingredients = [
         image: '/assets/almonds.jpg',
       },
       {
-        id: '18',
+        id: '28',
         name: 'Cashews',
         tags: [
           'rich in healthy fats',
@@ -184,7 +184,7 @@ export const ingredients = [
         image: '/assets/cashews.jpg',
       },
       {
-        id: '19',
+        id: '29',
         name: 'Sesame Seeds',
         tags: [
           'rich in calcium',
@@ -195,7 +195,7 @@ export const ingredients = [
         image: '/assets/sesame.jpg',
       },
       {
-        id: '20',
+        id: '210',
         name: 'Pine Nuts',
         tags: [
           'rich in vitamin K',
@@ -211,7 +211,7 @@ export const ingredients = [
     category: 'Vegetables',
     items: [
       {
-        id: '21',
+        id: '31',
         name: 'Kale',
         tags: [
           'high fiber',
@@ -222,7 +222,7 @@ export const ingredients = [
         image: '/assets/kale.jpg',
       },
       {
-        id: '22',
+        id: '32',
         name: 'Spinach',
         tags: [
           'high fiber',
@@ -233,7 +233,7 @@ export const ingredients = [
         image: '/assets/spinach.jpg',
       },
       {
-        id: '23',
+        id: '33',
         name: 'Broccoli',
         tags: [
           'high fiber',
@@ -244,7 +244,7 @@ export const ingredients = [
         image: '/assets/broccoli.jpg',
       },
       {
-        id: '24',
+        id: '34',
         name: 'Carrots',
         tags: [
           'rich in vitamin A',
@@ -255,7 +255,7 @@ export const ingredients = [
         image: '/assets/carrots.jpg',
       },
       {
-        id: '25',
+        id: '35',
         name: 'Sweet Potatoes',
         tags: [
           'rich in vitamin A',
@@ -266,7 +266,7 @@ export const ingredients = [
         image: '/assets/sweet-potato.jpg',
       },
       {
-        id: '26',
+        id: '36',
         name: 'Cauliflower',
         tags: [
           'high fiber',
@@ -277,7 +277,7 @@ export const ingredients = [
         image: '/assets/cauliflower.jpg',
       },
       {
-        id: '27',
+        id: '37',
         name: 'Zucchini',
         tags: [
           'low calorie',
@@ -288,7 +288,7 @@ export const ingredients = [
         image: '/assets/zucchini.jpg',
       },
       {
-        id: '28',
+        id: '38',
         name: 'Bell Peppers',
         tags: [
           'rich in vitamin C',
@@ -299,7 +299,7 @@ export const ingredients = [
         image: '/assets/bell-peppers.jpg',
       },
       {
-        id: '29',
+        id: '39',
         name: 'Brussels Sprouts',
         tags: [
           'high fiber',
@@ -310,7 +310,7 @@ export const ingredients = [
         image: '/assets/brussels-sprouts.jpg',
       },
       {
-        id: '30',
+        id: '310',
         name: 'Asparagus',
         tags: [
           'low calorie',
@@ -320,13 +320,152 @@ export const ingredients = [
         ],
         image: '/assets/asparagus.jpg',
       },
+      {
+        id: '311',
+        name: 'Tomato',
+        tags: [
+          'rich in vitamin C',
+          'high in antioxidants',
+          'supports heart health',
+          'low calorie',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg',
+      },
+      {
+        id: '312',
+        name: 'Onion',
+        tags: [
+          'rich in antioxidants',
+          'supports immune system',
+          'anti-inflammatory',
+          'low calorie',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/5/52/Cortando_cebolla.jpg',
+      },
+      {
+        id: '313',
+        name: 'Mushroom',
+        tags: [
+          'rich in vitamin D',
+          'low calorie',
+          'boosts immune system',
+          'supports brain health',
+        ],
+        image: '/assets/mushroom.jpg',
+      },
+      {
+        id: '314',
+        name: 'Beets',
+        tags: [
+          'rich in folate',
+          'supports blood circulation',
+          'high in antioxidants',
+          'boosts energy',
+        ],
+        image: '/assets/beets.jpg',
+      },
+      {
+        id: '315',
+        name: 'Potatoes',
+        tags: [
+          'rich in potassium',
+          'good source of fiber',
+          'high in carbohydrates',
+          'supports digestion',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/a/ab/Patates.jpg',
+      },
+      {
+        id: '316',
+        name: 'Swiss Chard',
+        tags: [
+          'high in vitamin K',
+          'rich in magnesium',
+          'low calorie',
+          'supports heart health',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/8/87/SwissChard.jpg',
+      },
+      {
+        id: '317',
+        name: 'Eggplant',
+        tags: [
+          'rich in fiber',
+          'low calorie',
+          'high in antioxidants',
+          'supports brain health',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/7/76/Solanum_melongena_24_08_2012_%281%29.JPG',
+      },
+      {
+        id: '318',
+        name: 'Cucumbers',
+        tags: [
+          'high in water content',
+          'low calorie',
+          'supports hydration',
+          'rich in vitamin K',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/1/1b/Cucumber_plants.jpg',
+      },
+      {
+        id: '319',
+        name: 'Celery',
+        tags: [
+          'low calorie',
+          'supports digestion',
+          'rich in antioxidants',
+          'high water content',
+        ],
+        image: '/assets/celery.jpg',
+      },
+      {
+        id: '320',
+        name: 'Radish',
+        tags: [
+          'rich in vitamin C',
+          'supports digestion',
+          'low calorie',
+          'anti-inflammatory',
+        ],
+        image: '/assets/radish.jpg',
+      },
+      {
+        id: '322',
+        name: 'Leeks',
+        tags: [
+          'rich in vitamin K',
+          'supports digestion',
+          'high in fiber',
+          'antioxidant-rich',
+        ],
+        image: '/assets/leeks.jpg',
+      },
+      {
+        id: '323',
+        name: 'Turnips',
+        tags: [
+          'high in fiber',
+          'rich in vitamin C',
+          'low calorie',
+          'supports digestion',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/d/d3/Turnip_2622027.jpg',
+      },
     ],
   },
   {
     category: 'Fruits',
     items: [
       {
-        id: '31',
+        id: '41',
         name: 'Blueberries',
         tags: [
           'high in antioxidants',
@@ -338,7 +477,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/7/7d/Dish_of_blueberries.jpg',
       },
       {
-        id: '32',
+        id: '42',
         name: 'Bananas',
         tags: [
           'high in potassium',
@@ -350,7 +489,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/4/4c/Bananas.jpg',
       },
       {
-        id: '33',
+        id: '43',
         name: 'Oranges',
         tags: [
           'rich in vitamin C',
@@ -362,7 +501,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/4/43/Ambersweet_oranges.jpg',
       },
       {
-        id: '34',
+        id: '44',
         name: 'Avocado',
         tags: [
           'rich in healthy fats',
@@ -373,7 +512,7 @@ export const ingredients = [
         image: '/assets/avocado.jpg',
       },
       {
-        id: '35',
+        id: '45',
         name: 'Strawberries',
         tags: [
           'high in antioxidants',
@@ -385,7 +524,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/d/d3/Erdbeerschalen_Viktualienmarkt_M%C3%BCnchen.jpg',
       },
       {
-        id: '36',
+        id: '46',
         name: 'Mangoes',
         tags: [
           'rich in vitamin A',
@@ -397,7 +536,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/f/fb/Carabao_mangoes_%28Philippines%29.jpg',
       },
       {
-        id: '37',
+        id: '47',
         name: 'Pineapple',
         tags: [
           'rich in vitamin C',
@@ -408,7 +547,7 @@ export const ingredients = [
         image: '/assets/pineapple.jpg',
       },
       {
-        id: '38',
+        id: '48',
         name: 'Apples',
         tags: [
           'high fiber',
@@ -419,7 +558,7 @@ export const ingredients = [
         image: '/assets/apple.jpg',
       },
       {
-        id: '39',
+        id: '49',
         name: 'Papaya',
         tags: [
           'rich in vitamin C',
@@ -430,7 +569,7 @@ export const ingredients = [
         image: '/assets/papaya.jpg',
       },
       {
-        id: '40',
+        id: '410',
         name: 'Pomegranate',
         tags: [
           'rich in antioxidants',
@@ -446,7 +585,7 @@ export const ingredients = [
     category: 'Whole Grains',
     items: [
       {
-        id: '41',
+        id: '51',
         name: 'Quinoa',
         tags: [
           'high protein',
@@ -457,7 +596,7 @@ export const ingredients = [
         image: '/assets/quinoa.jpg',
       },
       {
-        id: '43',
+        id: '52',
         name: 'Oats',
         tags: [
           'high fiber',
@@ -468,7 +607,7 @@ export const ingredients = [
         image: '/assets/oats.jpg',
       },
       {
-        id: '44',
+        id: '53',
         name: 'Barley',
         tags: [
           'high fiber',
@@ -480,7 +619,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/4/41/Barley_grains_3.jpg',
       },
       {
-        id: '45',
+        id: '54',
         name: 'Buckwheat',
         tags: [
           'high protein',
@@ -492,7 +631,7 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/a/a0/Buckwheat_and_products_from_it_01.jpg',
       },
       {
-        id: '46',
+        id: '55',
         name: 'Millet',
         tags: [
           'gluten-free',
@@ -503,7 +642,7 @@ export const ingredients = [
         image: '/assets/millet.jpg',
       },
       {
-        id: '47',
+        id: '56',
         name: 'Wild Rice',
         tags: [
           'high protein',
@@ -519,55 +658,121 @@ export const ingredients = [
     category: 'Staple Foods',
     items: [
       {
-        id: '48',
+        id: '61',
         name: 'Whole Wheat Bread',
         tags: ['high fiber', 'low glycemic index', 'rich in B vitamins'],
         image: '/assets/whole-wheat-bread.jpg',
       },
       {
-        id: '49',
+        id: '62',
         name: 'Brown Rice',
         tags: ['high fiber', 'supports digestion', 'rich in magnesium'],
         image: '/assets/brown-rice.jpg',
       },
       {
-        id: '50',
+        id: '63',
         name: 'Whole Wheat Pasta',
         tags: ['high fiber', 'complex carbs', 'rich in iron'],
         image: '/assets/whole-wheat-pasta.jpg',
       },
       {
-        id: '51',
+        id: '64',
         name: 'Sourdough Bread',
         tags: ['gut-friendly', 'rich in probiotics', 'easier to digest'],
         image:
           'https://upload.wikimedia.org/wikipedia/commons/3/3b/Home_made_sour_dough_bread.jpg',
       },
       {
-        id: '52',
+        id: '65',
         name: 'Corn Tortillas',
         tags: ['gluten-free', 'low calorie', 'good source of fiber'],
         image:
           'https://upload.wikimedia.org/wikipedia/commons/e/ef/Mexican_tortilla.jpg',
       },
       {
-        id: '53',
+        id: '66',
         name: 'Couscous',
         tags: ['quick to prepare', 'good source of selenium', 'low fat'],
         image: '/assets/couscous.jpg',
       },
       {
-        id: '55',
+        id: '67',
         name: 'Polenta',
         tags: ['gluten-free', 'rich in iron', 'good source of energy'],
         image:
           'https://upload.wikimedia.org/wikipedia/commons/1/1d/Polenta_uncooked.jpg',
       },
       {
-        id: '57',
+        id: '68',
         name: 'Whole Grain Crackers',
         tags: ['high fiber', 'low fat', 'good for snacking'],
         image: '/assets/crackers.jpg',
+      },
+    ],
+  },
+  {
+    category: 'Herbs & Spices',
+    items: [
+      {
+        id: '61',
+        name: 'Garlic',
+        tags: ['anti-inflammatory', 'immune-boosting', 'rich in allicin'],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/b/b2/Garlic_Press_and_Garlic.jpg',
+      },
+      {
+        id: '62',
+        name: 'Ginger',
+        tags: [
+          'supports digestion',
+          'anti-inflammatory',
+          'rich in antioxidants',
+        ],
+        image: '/assets/ginger.jpg',
+      },
+      {
+        id: '63',
+        name: 'Cumin',
+        tags: ['rich in iron', 'supports digestion', 'adds warm flavor'],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/e/e0/Sa_cumin.jpg',
+      },
+      {
+        id: '64',
+        name: 'Turmeric',
+        tags: [
+          'anti-inflammatory',
+          'supports joint health',
+          'adds golden color',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/5/5b/Curcuma_longa_roots.jpg',
+      },
+      {
+        id: '65',
+        name: 'Cinnamon',
+        tags: ['rich in antioxidants', 'supports metabolism', 'adds warmth'],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/d/de/Cinnamomum_verum_spices.jpg',
+      },
+      {
+        id: '66',
+        name: 'Basil',
+        tags: ['rich in vitamin K', 'supports digestion', 'fresh herb'],
+        image: '/assets/basil.jpg',
+      },
+      {
+        id: '67',
+        name: 'Parsley',
+        tags: ['rich in vitamin C', 'fresh herb', 'adds brightness'],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/5/58/ParsleyStem.jpg',
+      },
+      {
+        id: '68',
+        name: 'Cilantro',
+        tags: ['supports detoxification', 'fresh herb', 'adds citrusy flavor'],
+        image: '/assets/cilantro.jpg',
       },
     ],
   },

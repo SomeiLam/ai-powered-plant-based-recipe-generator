@@ -1,17 +1,19 @@
-import React from 'react';
-import { Check } from 'lucide-react';
-import { Ingredient } from '../types';
+import React from 'react'
+import { Check } from 'lucide-react'
+import { Ingredient } from '../types'
 
 interface IngredientCardProps {
-  ingredient: Ingredient;
-  selected: boolean;
-  onClick: () => void;
+  ingredient: Ingredient
+  selected: boolean
+  onClick: () => void
+  showTags: boolean
 }
 
 export const IngredientCard: React.FC<IngredientCardProps> = ({
   ingredient,
   selected,
   onClick,
+  showTags,
 }) => {
   return (
     <div
@@ -35,18 +37,20 @@ export const IngredientCard: React.FC<IngredientCardProps> = ({
         </div>
 
         {/* Tags Section */}
-        <div className="p-3">
-          <div className="flex flex-wrap gap-1">
-            {ingredient.tags.map((tag, index) => (
-              <span
-                key={index}
-                className="inline-block px-2 py-1 text-xs rounded-full bg-blue-100 text-gray-700 font-medium"
-              >
-                {tag}
-              </span>
-            ))}
+        {showTags && (
+          <div className="p-3">
+            <div className="flex flex-wrap gap-1">
+              {ingredient.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="inline-block px-2 py-1 text-xs rounded-full bg-blue-100 text-gray-700 font-medium"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Selection Indicator */}
         {selected && (
@@ -54,8 +58,7 @@ export const IngredientCard: React.FC<IngredientCardProps> = ({
             <Check className="w-4 h-4 text-white" />
           </div>
         )}
-
       </div>
     </div>
-  );
-};
+  )
+}
