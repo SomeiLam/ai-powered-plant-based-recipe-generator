@@ -195,7 +195,7 @@ export const IngredientSelection = () => {
                 {selectedIngredientList.map((ingredient) => (
                   <li
                     key={ingredient.id}
-                    className="flex justify-between bg-gray-100 rounded-lg p-2 items-center"
+                    className="flex gap-1 justify-between bg-gray-100 rounded-lg p-2 items-center"
                   >
                     <img
                       src={ingredient.image}
