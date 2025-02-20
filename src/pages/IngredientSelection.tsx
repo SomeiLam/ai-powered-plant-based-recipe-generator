@@ -185,13 +185,13 @@ export const IngredientSelection = () => {
 
           {/* ✅ Selected Ingredients */}
           <div className="bg-white rounded-lg p-6 shadow-md">
-            <h2 className="text-lg font-semibold text-gray-800">
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">
               Selected Ingredients
             </h2>
             {selectedIngredientList.length === 0 ? (
               <p className="text-gray-500">No ingredients selected.</p>
             ) : (
-              <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
                 {selectedIngredientList.map((ingredient) => (
                   <li
                     key={ingredient.id}
