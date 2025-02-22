@@ -1,213 +1,5 @@
 export const ingredients = [
   {
-    category: 'Legumes',
-    items: [
-      {
-        id: '11',
-        name: 'Lentils',
-        tags: ['high protein', 'high fiber', 'rich in iron', 'low calorie'],
-        image: '/assets/lentils.jpg',
-      },
-      {
-        id: '12',
-        name: 'Chickpeas',
-        tags: [
-          'high protein',
-          'high fiber',
-          'rich in folate',
-          'low glycemic index',
-        ],
-        image: '/assets/chickpeas.jpg',
-      },
-      {
-        id: '13',
-        name: 'Black Beans',
-        tags: ['high protein', 'high fiber', 'rich in antioxidants', 'low fat'],
-        image: '/assets/black-beans.jpg',
-      },
-      {
-        id: '14',
-        name: 'Kidney Beans',
-        tags: ['high protein', 'high fiber', 'rich in iron', 'low fat'],
-        image: '/assets/kidney-beans.jpg',
-      },
-      {
-        id: '15',
-        name: 'Edamame',
-        tags: [
-          'high protein',
-          'rich in vitamin K',
-          'rich in folate',
-          'low calorie',
-        ],
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/e/e7/Edamame_by_Zesmerelda_in_Chicago.jpg',
-      },
-      {
-        id: '16',
-        name: 'Green Peas',
-        tags: [
-          'high fiber',
-          'rich in vitamin C',
-          'rich in vitamin A',
-          'low fat',
-        ],
-        image: '/assets/green-peas.jpg',
-      },
-      {
-        id: '17',
-        name: 'Tofu',
-        tags: ['high protein', 'low calorie', 'rich in calcium', 'gluten-free'],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Tofu_4.jpg',
-      },
-      {
-        id: '18',
-        name: 'Tempeh',
-        tags: [
-          'high protein',
-          'rich in probiotics',
-          'rich in iron',
-          'gluten-free',
-        ],
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/e/e1/Tempeh_%288681605421%29.jpg',
-      },
-      {
-        id: '19',
-        name: 'Mung Beans',
-        tags: [
-          'high protein',
-          'high fiber',
-          'rich in antioxidants',
-          'low calorie',
-        ],
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/f/fc/Bean_pod_of_Vigna_radiata_%28mung_bean%29.jpg',
-      },
-      {
-        id: '110',
-        name: 'Lupini Beans',
-        tags: ['high protein', 'high fiber', 'rich in magnesium', 'low fat'],
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/5/57/Ciotola_di_lupini.jpg',
-      },
-    ],
-  },
-  {
-    category: 'Seeds and Nuts',
-    items: [
-      {
-        id: '21',
-        name: 'Chia Seeds',
-        tags: ['high protein', 'high fiber', 'rich in omega-3', 'gluten-free'],
-        image: '/assets/chia-seeds.jpg',
-      },
-      {
-        id: '22',
-        name: 'Flaxseeds',
-        tags: [
-          'high fiber',
-          'rich in omega-3',
-          'rich in lignans',
-          'gluten-free',
-        ],
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/5/56/Brown_Flax_Seeds.jpg',
-      },
-      {
-        id: '23',
-        name: 'Hemp Seeds',
-        tags: [
-          'high protein',
-          'rich in omega-3',
-          'rich in magnesium',
-          'gluten-free',
-        ],
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/f/f4/Hemp_Seeds_protein1.jpg',
-      },
-      {
-        id: '24',
-        name: 'Sunflower Seeds',
-        tags: [
-          'rich in vitamin E',
-          'high fiber',
-          'rich in selenium',
-          'gluten-free',
-        ],
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/1/13/Whole_Sunflower_seed.jpg',
-      },
-      {
-        id: '25',
-        name: 'Pumpkin Seeds',
-        tags: [
-          'high protein',
-          'rich in magnesium',
-          'rich in zinc',
-          'gluten-free',
-        ],
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/2/2e/Pumpkin_Seeds.jpg',
-      },
-      {
-        id: '26',
-        name: 'Walnuts',
-        tags: [
-          'rich in omega-3',
-          'high antioxidants',
-          'supports brain health',
-          'gluten-free',
-        ],
-        image: '/assets/walnut.jpg',
-      },
-      {
-        id: '27',
-        name: 'Almonds',
-        tags: [
-          'high protein',
-          'rich in vitamin E',
-          'supports heart health',
-          'gluten-free',
-        ],
-        image: '/assets/almonds.jpg',
-      },
-      {
-        id: '28',
-        name: 'Cashews',
-        tags: [
-          'rich in healthy fats',
-          'high in magnesium',
-          'supports bone health',
-          'gluten-free',
-        ],
-        image: '/assets/cashews.jpg',
-      },
-      {
-        id: '29',
-        name: 'Sesame Seeds',
-        tags: [
-          'rich in calcium',
-          'high in antioxidants',
-          'supports skin health',
-          'gluten-free',
-        ],
-        image: '/assets/sesame.jpg',
-      },
-      {
-        id: '210',
-        name: 'Pine Nuts',
-        tags: [
-          'rich in vitamin K',
-          'high in magnesium',
-          'supports heart health',
-          'gluten-free',
-        ],
-        image: '/assets/pine-nuts.jpg',
-      },
-    ],
-  },
-  {
     category: 'Vegetables',
     items: [
       {
@@ -458,6 +250,214 @@ export const ingredients = [
         ],
         image:
           'https://upload.wikimedia.org/wikipedia/commons/d/d3/Turnip_2622027.jpg',
+      },
+    ],
+  },
+  {
+    category: 'Legumes',
+    items: [
+      {
+        id: '11',
+        name: 'Lentils',
+        tags: ['high protein', 'high fiber', 'rich in iron', 'low calorie'],
+        image: '/assets/lentils.jpg',
+      },
+      {
+        id: '12',
+        name: 'Chickpeas',
+        tags: [
+          'high protein',
+          'high fiber',
+          'rich in folate',
+          'low glycemic index',
+        ],
+        image: '/assets/chickpeas.jpg',
+      },
+      {
+        id: '13',
+        name: 'Black Beans',
+        tags: ['high protein', 'high fiber', 'rich in antioxidants', 'low fat'],
+        image: '/assets/black-beans.jpg',
+      },
+      {
+        id: '14',
+        name: 'Kidney Beans',
+        tags: ['high protein', 'high fiber', 'rich in iron', 'low fat'],
+        image: '/assets/kidney-beans.jpg',
+      },
+      {
+        id: '15',
+        name: 'Edamame',
+        tags: [
+          'high protein',
+          'rich in vitamin K',
+          'rich in folate',
+          'low calorie',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/e/e7/Edamame_by_Zesmerelda_in_Chicago.jpg',
+      },
+      {
+        id: '16',
+        name: 'Green Peas',
+        tags: [
+          'high fiber',
+          'rich in vitamin C',
+          'rich in vitamin A',
+          'low fat',
+        ],
+        image: '/assets/green-peas.jpg',
+      },
+      {
+        id: '17',
+        name: 'Tofu',
+        tags: ['high protein', 'low calorie', 'rich in calcium', 'gluten-free'],
+        image: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Tofu_4.jpg',
+      },
+      {
+        id: '18',
+        name: 'Tempeh',
+        tags: [
+          'high protein',
+          'rich in probiotics',
+          'rich in iron',
+          'gluten-free',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/e/e1/Tempeh_%288681605421%29.jpg',
+      },
+      {
+        id: '19',
+        name: 'Mung Beans',
+        tags: [
+          'high protein',
+          'high fiber',
+          'rich in antioxidants',
+          'low calorie',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/f/fc/Bean_pod_of_Vigna_radiata_%28mung_bean%29.jpg',
+      },
+      {
+        id: '110',
+        name: 'Lupini Beans',
+        tags: ['high protein', 'high fiber', 'rich in magnesium', 'low fat'],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/5/57/Ciotola_di_lupini.jpg',
+      },
+    ],
+  },
+  {
+    category: 'Seeds and Nuts',
+    items: [
+      {
+        id: '21',
+        name: 'Chia Seeds',
+        tags: ['high protein', 'high fiber', 'rich in omega-3', 'gluten-free'],
+        image: '/assets/chia-seeds.jpg',
+      },
+      {
+        id: '22',
+        name: 'Flaxseeds',
+        tags: [
+          'high fiber',
+          'rich in omega-3',
+          'rich in lignans',
+          'gluten-free',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/5/56/Brown_Flax_Seeds.jpg',
+      },
+      {
+        id: '23',
+        name: 'Hemp Seeds',
+        tags: [
+          'high protein',
+          'rich in omega-3',
+          'rich in magnesium',
+          'gluten-free',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/f/f4/Hemp_Seeds_protein1.jpg',
+      },
+      {
+        id: '24',
+        name: 'Sunflower Seeds',
+        tags: [
+          'rich in vitamin E',
+          'high fiber',
+          'rich in selenium',
+          'gluten-free',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/1/13/Whole_Sunflower_seed.jpg',
+      },
+      {
+        id: '25',
+        name: 'Pumpkin Seeds',
+        tags: [
+          'high protein',
+          'rich in magnesium',
+          'rich in zinc',
+          'gluten-free',
+        ],
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/2/2e/Pumpkin_Seeds.jpg',
+      },
+      {
+        id: '26',
+        name: 'Walnuts',
+        tags: [
+          'rich in omega-3',
+          'high antioxidants',
+          'supports brain health',
+          'gluten-free',
+        ],
+        image: '/assets/walnut.jpg',
+      },
+      {
+        id: '27',
+        name: 'Almonds',
+        tags: [
+          'high protein',
+          'rich in vitamin E',
+          'supports heart health',
+          'gluten-free',
+        ],
+        image: '/assets/almonds.jpg',
+      },
+      {
+        id: '28',
+        name: 'Cashews',
+        tags: [
+          'rich in healthy fats',
+          'high in magnesium',
+          'supports bone health',
+          'gluten-free',
+        ],
+        image: '/assets/cashews.jpg',
+      },
+      {
+        id: '29',
+        name: 'Sesame Seeds',
+        tags: [
+          'rich in calcium',
+          'high in antioxidants',
+          'supports skin health',
+          'gluten-free',
+        ],
+        image: '/assets/sesame.jpg',
+      },
+      {
+        id: '210',
+        name: 'Pine Nuts',
+        tags: [
+          'rich in vitamin K',
+          'high in magnesium',
+          'supports heart health',
+          'gluten-free',
+        ],
+        image: '/assets/pine-nuts.jpg',
       },
     ],
   },
@@ -714,14 +714,14 @@ export const ingredients = [
     category: 'Herbs & Spices',
     items: [
       {
-        id: '61',
+        id: '71',
         name: 'Garlic',
         tags: ['anti-inflammatory', 'immune-boosting', 'rich in allicin'],
         image:
           'https://upload.wikimedia.org/wikipedia/commons/b/b2/Garlic_Press_and_Garlic.jpg',
       },
       {
-        id: '62',
+        id: '72',
         name: 'Ginger',
         tags: [
           'supports digestion',
@@ -731,14 +731,14 @@ export const ingredients = [
         image: '/assets/ginger.jpg',
       },
       {
-        id: '63',
+        id: '73',
         name: 'Cumin',
         tags: ['rich in iron', 'supports digestion', 'adds warm flavor'],
         image:
           'https://upload.wikimedia.org/wikipedia/commons/e/e0/Sa_cumin.jpg',
       },
       {
-        id: '64',
+        id: '74',
         name: 'Turmeric',
         tags: [
           'anti-inflammatory',
@@ -749,27 +749,27 @@ export const ingredients = [
           'https://upload.wikimedia.org/wikipedia/commons/5/5b/Curcuma_longa_roots.jpg',
       },
       {
-        id: '65',
+        id: '75',
         name: 'Cinnamon',
         tags: ['rich in antioxidants', 'supports metabolism', 'adds warmth'],
         image:
           'https://upload.wikimedia.org/wikipedia/commons/d/de/Cinnamomum_verum_spices.jpg',
       },
       {
-        id: '66',
+        id: '76',
         name: 'Basil',
         tags: ['rich in vitamin K', 'supports digestion', 'fresh herb'],
         image: '/assets/basil.jpg',
       },
       {
-        id: '67',
+        id: '77',
         name: 'Parsley',
         tags: ['rich in vitamin C', 'fresh herb', 'adds brightness'],
         image:
           'https://upload.wikimedia.org/wikipedia/commons/5/58/ParsleyStem.jpg',
       },
       {
-        id: '68',
+        id: '78',
         name: 'Cilantro',
         tags: ['supports detoxification', 'fresh herb', 'adds citrusy flavor'],
         image: '/assets/cilantro.jpg',
